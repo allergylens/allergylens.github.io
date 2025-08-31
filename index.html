@@ -24,9 +24,31 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         .step-card {
-             background: rgba(255, 255, 255, 0.9);
+             background: rgba(255, 255, 255, 0.95);
              backdrop-filter: blur(10px);
-             border: 1px solid rgba(255, 255, 255, 0.2);
+             border: 1px solid rgba(255, 255, 255, 0.3);
+             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .steps-section {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.8), rgba(67, 56, 202, 0.9)), 
+                        url('https://placehold.co/1920x1080/e0e7ff/3730a3?text=Allergy+Scanning');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .steps-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(67, 56, 202, 0.7);
+            z-index: 1;
+        }
+        .steps-content {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
@@ -107,8 +129,8 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20" style="background-image: url('https://placehold.co/1920x1080/e0e7ff/3730a3?text=Allergy+Scanning'); background-size: cover; background-position: center;">
-        <div class="container mx-auto px-6">
+    <section id="how-it-works" class="py-20 steps-section">
+        <div class="container mx-auto px-6 steps-content">
             <h2 class="text-3xl font-bold text-center text-white mb-12">Just 3 Easy Steps</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="step-card p-8 rounded-xl">
